@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: lato;
+    list-style: none;
+}
+html{
+    --yellow: #FFDD67;
+    --orange: #FF8A5C;
+    --black: #444444;
+    --red: #CF455C;
+    --white: #fff;
+}
+.logo h3{
+    font-size: 2rem;
+    color: var(--white);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1111;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--red);
+}
+body{
+    background: #eff4fd;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+h3{
+    font-size: 1.5rem;
+    color: #333;
+}
+ul li{
+    padding: 15px;
+    cursor: pointer;
+
+}
+
+
+.toggle .line{
+    height: 4px;
+    width: 25px;
+    background-color: var(--black);
+    margin: 4px;
+    
+}
+li a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+li a:hover{
+    color: var(--black);
+}
+.toggle{
+    cursor: pointer;
+    display: none;
+}
+.main-nav{
+    display: flex;
+    transition: 0.4s ease-in-out;
+}
+@media(max-width: 670px) {
+    .main-nav{
+        position: absolute;
+        display: block;
+        background-color: var(--red);
+        padding: 10px;
+        top: 3rem;
+        left: 0px;
+        width: 100%;
+        z-index: -10;
+
+    }
+    li{
+        padding: 10px;
+    }
+    .toggle{
+        display: block;
+        z-index: 10;
+    }
+    h3{
+        z-index: 10;
+    }
+
+    /* Open and close */
+ 
+    .close{
+        transform: translateY(-115%);
+    }
+}
+
+/* About me page */
+.about-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 0;
+}
+.about-left{
+    max-width: 400px;
+    /* border: 1px solid red; */
+    box-shadow: 1px 1px #ccc, -1px -1px #ccc;
+    padding: 2rem;
+}
+span{
+    color: var(--orange);
+}
+.about-left .span{
+    padding: 15px 0;
+    font-family: cursive;
+}
+.about-left p{
+    line-height: 1.5;
+    text-align: justify;
+}
+img{
+    max-width: 100%;
+}
+.about-main .about-right img{
+    max-width: 350px;
+}
+.about-left h1{
+    margin: 10px 0;
+}
+@media(max-width:760px) {
+    .about-main{
+        flex-direction: column-reverse;
+    }
+    .about-left {
+        padding: 15px;
+    }
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 0;
+    background-color: var(--black);
+    color: #fff;
+    flex-wrap: wrap;
+}
+footer a{
+    color: var(--white);
+}
